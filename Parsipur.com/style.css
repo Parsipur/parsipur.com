@@ -1,0 +1,185 @@
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'EB Garamond', Garamond, serif;
+    color: #1c1c1c;
+    background: #f7f6f2;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(247,246,242,0.9);
+    backdrop-filter: blur(6px);
+    z-index: 1000;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 2.2rem;
+}
+
+nav a {
+    text-decoration: none;
+    margin-left: 30px;
+    color: #333;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.hero {
+    display: flex;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.hero-left {
+    width: 50%;
+    padding: 10% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-left h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.hero-left p {
+    margin-top: 25px;
+    max-width: 400px;
+    font-weight: 300;
+}
+
+.cta {
+    margin-top: 30px;
+    text-decoration: none;
+    border-bottom: 1px solid #4a4a4a;
+    width: fit-content;
+    padding-bottom: 5px;
+    color: #333333;
+}
+
+.hero-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: none;
+    padding: 20px;
+}
+
+.hero-right img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px 0;
+    display: block;
+}
+
+/* push the first swatch down so it's fully visible behind the fixed header */
+.hero-right img:first-child {
+    margin-top: 80px;
+}
+
+.section {
+    padding: 120px 8%;
+}
+
+/* Ensure sections contain floated children and avoid overlap */
+.section {
+    overflow: auto;
+}
+
+.section.alt {
+    background: #eae7df;
+}
+
+.section.dark {
+    background: #1c1c1c;
+    color: white;
+}
+
+.content {
+    max-width: 900px;
+}
+
+.content.narrow {
+    max-width: 600px;
+}
+
+/* Place heritage text on the left column on larger screens so it doesn't press on the hero images */
+@media (min-width: 900px) {
+    #heritage .content {
+        width: 48%;
+        max-width: none;
+        float: left;
+        margin-left: 8%;
+        margin-right: 4%;
+    }
+}
+
+@media (max-width: 899px) {
+    #heritage .content {
+        width: 100%;
+        float: none;
+        margin-left: 0;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.columns {
+    display: flex;
+    gap: 80px;
+    font-weight: 300;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea {
+    padding: 12px;
+    border: none;
+}
+
+form button {
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
