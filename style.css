@@ -8,8 +8,8 @@
 
 body {
     font-family: 'EB Garamond', Garamond, serif;
-    color: #1c1c1c;
-    background: #f7f6f2;
+    color: #3d4b59;
+    background: #a7b6c4;
 }
 
 header {
@@ -71,7 +71,7 @@ nav a:hover {
 .cta {
     margin-top: 30px;
     text-decoration: none;
-    border-bottom: 1px solid #4a4a4a;
+    border-bottom: 1px solid #7f89b0;
     width: fit-content;
     padding-bottom: 5px;
     color: #333333;
@@ -96,7 +96,7 @@ nav a:hover {
     display: block;
 }
 
-/* push the first swatch down so it's fully visible behind the fixed header */
+/* push the first swatch down so it's fully visible below the fixed header */
 .hero-right img:first-child {
     margin-top: 80px;
 }
@@ -111,12 +111,12 @@ nav a:hover {
 }
 
 .section.alt {
-    background: #eae7df;
+    background: #a4b5bf;
 }
 
 .section.dark {
-    background: #1c1c1c;
-    color: white;
+    background: #a4b5bf;
+    color: blue;
 }
 
 .content {
