@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Parsipur Carpet Industries</title>
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,12 +21,13 @@
 
 <section class="hero">
     <div class="hero-left">
-        <h1>
+        <h1 class="reveal">
             Rugs for<br>
             Contemporary<br>
             Spaces.
         </h1>
-        <p>
+
+        <p class="reveal reveal-delay-1">
             Third-generation manufacturing.
             Design-conscious production.
             Global partnerships.
@@ -34,36 +35,40 @@
             Your vision is our responsibility.
             What you think, we weave.
         </p>
-        <a href="#contact" class="cta">Trade Inquiry</a>
+
+        <a href="#contact" class="cta reveal reveal-delay-2">
+            Trade Inquiry
+        </a>
     </div>
 
-    <div class="hero-right">
+    <div class="hero-right reveal reveal-delay-3 image-wrapper">
         <img src="sample/Parsipur_SwatchPresentation_USPartners_2.jpeg" alt="Fabric Swatch Collection">
-        <img src="sample/Parsipur_SwatchPresentation_USPartners_3.jpeg" alt="Fabric Swatch Close View">
     </div>
 </section>
 
-<section class="about">
+
+<section class="section">
   <div class="about-container">
     <div class="about-text">
-      <h1>Since 1967</h1>
-      <p>
+      <h2 class="reveal">Since 1967</h2>
+      <p class="reveal reveal-delay-1">
         Founded in Bhadohi, India, Parsipur Carpet Industries blends
         traditional weaving mastery with modern production systems.
         Our foundation is artisan-driven — our scale is export-ready.
       </p>
     </div>
 
-    <div class="about-image">
-    </div
+    <div class="about-image image-wrapper reveal reveal-delay-2">
+        <img src="sample/Parsipur_SwatchPresentation_USPartners_3.jpeg" alt="Parsipur Craft">
+    </div>
   </div>
 </section>
 
 
 <section id="craft" class="section alt">
     <div class="content">
-        <h2>Craft & Construction</h2>
-        <div class="columns">
+        <h2 class="reveal">Craft & Construction</h2>
+        <div class="columns reveal reveal-delay-1">
             <div>
                 <h3>Hand-Knotted</h3>
                 <h3>Hand-Tufted</h3>
@@ -76,10 +81,11 @@
     </div>
 </section>
 
+
 <section id="capabilities" class="section">
     <div class="content narrow">
-        <h2>Private Label Manufacturing</h2>
-        <p>
+        <h2 class="reveal">Private Label Manufacturing</h2>
+        <p class="reveal reveal-delay-1">
             Sampling, fiber development, color matching,
             custom sizing, and scalable production
             for retailers and design-led brands worldwide.
@@ -87,10 +93,12 @@
     </div>
 </section>
 
+
 <section id="contact" class="section dark">
     <div class="content narrow">
-        <h2>Start a Conversation</h2>
-        <form>
+        <h2 class="reveal">Start a Conversation</h2>
+
+        <form class="reveal reveal-delay-1">
             <input type="text" placeholder="Company Name">
             <input type="email" placeholder="Business Email">
             <textarea placeholder="Project Details"></textarea>
@@ -99,10 +107,41 @@
     </div>
 </section>
 
+
 <footer>
     <p>© 2026 Parsipur Carpet Industries. All Rights Reserved.</p>
 </footer>
 
-<script src="script.js"></script>
+
+<!-- =========================
+     €50K STUDIO JAVASCRIPT
+     ========================= -->
+
+<script>
+/* Header Shrink */
+window.addEventListener("scroll", function() {
+    const header = document.querySelector("header");
+    header.classList.toggle("scrolled", window.scrollY > 80);
+});
+
+/* Fade In Reveal */
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    reveals.forEach(el => {
+        const windowHeight = window.innerHeight;
+        const elementTop = el.getBoundingClientRect().top;
+        const visiblePoint = 120;
+
+        if (elementTop < windowHeight - visiblePoint) {
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+</script>
+
 </body>
 </html>
