@@ -1,6 +1,19 @@
-/* Ultra Refined Royal Minimal Theme */
+/* ===============================
+   PARSIPUR CARPET – REFINED THEME
+   =============================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+    --bg: #f6f4f1;
+    --white: #ffffff;
+    --dark: #1f2833;
+    --text: #4f5b67;
+    --gold: #b6a36a;
+    --border: #e8e6e2;
+}
+
+/* ================= BASE ================= */
 
 * {
     margin: 0;
@@ -9,10 +22,16 @@
 }
 
 body {
-    font-family: "Times New Roman", serif;
-    background: #f9fafb;
-    color: #2b3440;
-    line-height: 1.9;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--dark);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    width: 100%;
+    display: block;
 }
 
 /* ================= HEADER ================= */
@@ -20,144 +39,153 @@ body {
 header {
     position: fixed;
     width: 100%;
-    padding: 28px 12%;
+    padding: 24px 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255,255,255,0.96);
-    border-bottom: 1px solid #f0f2f4;
+    background: rgba(246,244,241,0.96);
+    border-bottom: 1px solid var(--border);
     z-index: 1000;
 }
 
 .brand {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 3rem;
+    font-size: 2.2rem;
     font-weight: 400;
     letter-spacing: 0.5px;
-    color: #1f2833;
+    color: var(--dark);
 }
 
-/* Minimal Nav */
+/* Navigation */
+
 nav a {
     text-decoration: none;
-    margin-left: 48px;
-    font-size: 13px;
+    margin-left: 42px;
+    font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: #4a5664;
+    color: #5d6875;
     transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: #b79a52; /* Muted luxury gold */
+    color: var(--gold);
 }
 
 /* ================= HERO ================= */
 
 .hero {
-    padding: 200px 12% 140px 12%;
-    max-width: 1200px;
+    padding: 180px 12% 120px 12%;
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 90px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .hero h1 {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 5rem;
-    line-height: 1.05;
-    color: #1f2833;
-    max-width: 800px;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    max-width: 580px;
+    color: var(--dark);
 }
 
 .hero p {
-    margin-top: 50px;
-    font-size: 19px;
-    max-width: 650px;
-    color: #5b6775;
+    margin-top: 40px;
+    font-size: 17px;
+    max-width: 520px;
+    color: var(--text);
 }
 
-/* Refined Button */
 .cta {
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 50px;
     padding: 14px 36px;
-    border: 1px solid #b79a52;
+    border: 1px solid var(--gold);
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #b79a52;
+    color: var(--gold);
     transition: 0.3s ease;
 }
 
 .cta:hover {
-    background: #b79a52;
-    color: #ffffff;
+    background: var(--gold);
+    color: var(--white);
 }
 
 /* ================= SECTIONS ================= */
 
 .section {
-    padding: 180px 12%;
-    background: #ffffff;
+    padding: 120px 12%;
+    background: var(--white);
 }
 
 .section.alt {
-    background: #f5f7f9;
+    background: #f1efec;
 }
 
 .section.dark {
-    background: #1f2833;
-    color: #f4f6f8;
+    background: var(--dark);
+    color: var(--white);
 }
 
 /* Headings */
+
 h2 {
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 4rem;
-    margin-bottom: 60px;
-    color: #1f2833;
-}
-
-/* Subtle Gold Accent Line */
-h2::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 1px;
-    background: #b79a52;
-    margin-top: 25px;
+    font-size: 3.2rem;
+    margin-bottom: 50px;
+    color: var(--dark);
+    position: relative;
 }
 
 .section.dark h2 {
-    color: #ffffff;
+    color: var(--white);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin-top: 20px;
 }
 
 .section.dark h2::after {
     background: #d1b772;
 }
 
-/* Body Text */
-p {
-    font-size: 18px;
-    max-width: 720px;
-    color: #5b6775;
+.section p {
+    font-size: 17px;
+    max-width: 680px;
+    color: var(--text);
+}
+
+.section.dark p {
+    color: #d4d8dd;
 }
 
 /* ================= ABOUT LAYOUT ================= */
 
 .about-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
-    gap: 100px;
 }
 
 .about-image img {
-    width: 100%;
-    border-radius: 6px;
+    border-radius: 4px;
 }
 
 /* ================= FORM ================= */
@@ -165,30 +193,31 @@ p {
 form {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    max-width: 500px;
+    gap: 22px;
+    max-width: 480px;
 }
 
 form input,
 form textarea {
-    padding: 16px;
-    border: 1px solid #e4e7ea;
-    font-family: "Times New Roman", serif;
-    font-size: 16px;
-    background: #ffffff;
+    padding: 14px;
+    border: 1px solid var(--border);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    background: var(--white);
+    transition: 0.3s ease;
 }
 
 form input:focus,
 form textarea:focus {
     outline: none;
-    border-color: #b79a52;
+    border-color: var(--gold);
 }
 
 form button {
-    padding: 16px;
-    border: 1px solid #b79a52;
+    padding: 15px;
+    border: 1px solid var(--gold);
     background: transparent;
-    color: #b79a52;
+    color: var(--gold);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 12px;
@@ -197,18 +226,56 @@ form button {
 }
 
 form button:hover {
-    background: #b79a52;
-    color: white;
+    background: var(--gold);
+    color: var(--white);
 }
 
 /* ================= FOOTER ================= */
 
 footer {
-    padding: 100px 12%;
+    padding: 80px 12%;
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    background: #f5f7f9;
+    background: #eceae6;
     color: #6b7683;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 150px;
+        gap: 60px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    header {
+        padding: 18px 8%;
+    }
+
+    .section {
+        padding: 90px 8%;
+    }
 }
