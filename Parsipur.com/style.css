@@ -1,6 +1,6 @@
-/* Royal Minimal Luxury Theme */
+/* Ultra Refined Royal Minimal Theme */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 * {
     margin: 0;
@@ -9,10 +9,10 @@
 }
 
 body {
-    font-family: "Times New Roman", Times, serif;
-    background: #f8fbff;
-    color: #2c3440;
-    line-height: 1.8;
+    font-family: "Times New Roman", serif;
+    background: #f9fafb;
+    color: #2b3440;
+    line-height: 1.9;
 }
 
 /* ================= HEADER ================= */
@@ -20,158 +20,144 @@ body {
 header {
     position: fixed;
     width: 100%;
-    padding: 25px 10%;
+    padding: 28px 12%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
-    border-bottom: 1px solid #eceff3;
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #f0f2f4;
     z-index: 1000;
 }
 
 .brand {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 2.8rem;
-    color: #1f2a36;
-    letter-spacing: 1px;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: #1f2833;
 }
 
+/* Minimal Nav */
 nav a {
     text-decoration: none;
-    margin-left: 40px;
-    color: #2c3440;
-    font-size: 15px;
-    letter-spacing: 1px;
+    margin-left: 48px;
+    font-size: 13px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    position: relative;
+    color: #4a5664;
     transition: 0.3s ease;
 }
 
-/* Gold underline hover */
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 1px;
-    left: 0;
-    bottom: -6px;
-    background: #c6a75e;
-    transition: 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
+nav a:hover {
+    color: #b79a52; /* Muted luxury gold */
 }
 
 /* ================= HERO ================= */
 
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10%;
-    text-align: center;
+    padding: 200px 12% 140px 12%;
+    max-width: 1200px;
 }
 
 .hero h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 4rem;
     font-weight: 400;
-    color: #1f2a36;
+    font-size: 5rem;
+    line-height: 1.05;
+    color: #1f2833;
+    max-width: 800px;
 }
 
 .hero p {
-    margin-top: 30px;
-    font-size: 18px;
-    color: #5c6a79;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 50px;
+    font-size: 19px;
+    max-width: 650px;
+    color: #5b6775;
 }
 
-/* Elegant CTA */
+/* Refined Button */
 .cta {
     display: inline-block;
-    margin-top: 40px;
-    padding: 12px 28px;
-    border: 1px solid #c6a75e;
+    margin-top: 60px;
+    padding: 14px 36px;
+    border: 1px solid #b79a52;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     text-decoration: none;
-    color: #c6a75e;
-    font-size: 14px;
-    letter-spacing: 1px;
+    color: #b79a52;
     transition: 0.3s ease;
 }
 
 .cta:hover {
-    background: #c6a75e;
-    color: white;
+    background: #b79a52;
+    color: #ffffff;
 }
 
 /* ================= SECTIONS ================= */
 
 .section {
-    padding: 160px 10%;
-    background: white;
+    padding: 180px 12%;
+    background: #ffffff;
 }
 
 .section.alt {
-    background: #f3f7fb;
+    background: #f5f7f9;
 }
 
 .section.dark {
-    background: #1f2a36;
-    color: white;
+    background: #1f2833;
+    color: #f4f6f8;
 }
 
 /* Headings */
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 3rem;
     font-weight: 400;
-    margin-bottom: 40px;
-    position: relative;
+    font-size: 4rem;
+    margin-bottom: 60px;
+    color: #1f2833;
 }
 
-/* Gold accent line */
+/* Subtle Gold Accent Line */
 h2::after {
     content: "";
     display: block;
-    width: 70px;
-    height: 2px;
-    background: #c6a75e;
-    margin-top: 20px;
+    width: 80px;
+    height: 1px;
+    background: #b79a52;
+    margin-top: 25px;
 }
 
+.section.dark h2 {
+    color: #ffffff;
+}
+
+.section.dark h2::after {
+    background: #d1b772;
+}
+
+/* Body Text */
 p {
     font-size: 18px;
-    color: #5c6a79;
-    max-width: 750px;
+    max-width: 720px;
+    color: #5b6775;
 }
 
-/* ================= ABOUT ================= */
+/* ================= ABOUT LAYOUT ================= */
 
 .about-container {
     display: flex;
     align-items: center;
-    gap: 80px;
-}
-
-.about-text {
-    flex: 1;
-}
-
-.about-image {
-    flex: 1;
+    gap: 100px;
 }
 
 .about-image img {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 6px;
 }
 
 /* ================= FORM ================= */
@@ -179,45 +165,50 @@ p {
 form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
     max-width: 500px;
 }
 
 form input,
 form textarea {
-    padding: 15px;
-    border: 1px solid #e5e8ec;
-    background: white;
-    font-family: "Times New Roman", Times, serif;
+    padding: 16px;
+    border: 1px solid #e4e7ea;
+    font-family: "Times New Roman", serif;
+    font-size: 16px;
+    background: #ffffff;
 }
 
 form input:focus,
 form textarea:focus {
     outline: none;
-    border-color: #c6a75e;
+    border-color: #b79a52;
 }
 
 form button {
-    padding: 14px;
-    border: 1px solid #c6a75e;
+    padding: 16px;
+    border: 1px solid #b79a52;
     background: transparent;
-    color: #c6a75e;
+    color: #b79a52;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 12px;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 form button:hover {
-    background: #c6a75e;
+    background: #b79a52;
     color: white;
 }
 
 /* ================= FOOTER ================= */
 
 footer {
+    padding: 100px 12%;
     text-align: center;
-    padding: 60px;
-    background: #1f2a36;
-    color: #d9dee4;
-    font-size: 14px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #f5f7f9;
+    color: #6b7683;
 }
