@@ -1,4 +1,6 @@
-/* Luxury Light Airy Blue + Soft Gold Accents */
+/* Royal Minimal Luxury Theme */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 * {
     margin: 0;
@@ -8,48 +10,54 @@
 
 body {
     font-family: "Times New Roman", Times, serif;
-    color: #2f3e4d;
-    background: #eef5fb;
+    background: #f8fbff;
+    color: #2c3440;
+    line-height: 1.8;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
+
 header {
     position: fixed;
     width: 100%;
-    padding: 22px 8%;
+    padding: 25px 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(8px);
+    border-bottom: 1px solid #eceff3;
     z-index: 1000;
-    border-bottom: 1px solid #e6edf3;
 }
 
 .brand {
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-size: 2.2rem;
-    color: #1e2f3f;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 2.8rem;
+    color: #1f2a36;
+    letter-spacing: 1px;
 }
 
 nav a {
     text-decoration: none;
-    margin-left: 30px;
-    color: #3a4b5c;
-    transition: 0.3s ease;
+    margin-left: 40px;
+    color: #2c3440;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     position: relative;
+    transition: 0.3s ease;
 }
 
-/* Elegant gold underline hover */
+/* Gold underline hover */
 nav a::after {
     content: "";
     position: absolute;
     width: 0%;
     height: 1px;
     left: 0;
-    bottom: -4px;
-    background: #c6a75e; /* Soft champagne gold */
+    bottom: -6px;
+    background: #c6a75e;
     transition: 0.3s ease;
 }
 
@@ -57,191 +65,130 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* HERO */
+/* ================= HERO ================= */
+
 .hero {
-    display: flex;
     height: 100vh;
-    padding-top: 100px;
-}
-
-.hero-left {
-    width: 50%;
-    padding: 10% 8%;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 0 10%;
+    text-align: center;
 }
 
-.hero-left h1 {
-    font-size: 3.6rem;
-    font-weight: 600;
-    line-height: 1.15;
-    color: #1e2f3f;
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #1f2a36;
 }
 
-.hero-left p {
-    margin-top: 25px;
-    max-width: 420px;
+.hero p {
+    margin-top: 30px;
     font-size: 18px;
-    color: #5c6f82;
-    line-height: 1.8;
+    color: #5c6a79;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* GOLD CTA */
+/* Elegant CTA */
 .cta {
-    margin-top: 35px;
+    display: inline-block;
+    margin-top: 40px;
+    padding: 12px 28px;
+    border: 1px solid #c6a75e;
     text-decoration: none;
-    border-bottom: 1px solid #c6a75e;
-    width: fit-content;
-    padding-bottom: 6px;
-    color: #1e2f3f;
+    color: #c6a75e;
+    font-size: 14px;
+    letter-spacing: 1px;
     transition: 0.3s ease;
 }
 
 .cta:hover {
-    color: #c6a75e;
+    background: #c6a75e;
+    color: white;
 }
 
-/* HERO IMAGES */
-.hero-right {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
-}
+/* ================= SECTIONS ================= */
 
-.hero-right img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 14px;
-    margin: 20px 0;
-    display: block;
-    box-shadow: 0 20px 50px rgba(198, 167, 94, 0.15);
-}
-
-.hero-right img:first-child {
-    margin-top: 80px;
-}
-
-/* SECTIONS */
 .section {
-    padding: 140px 10%;
-    overflow: auto;
-    background: #f6fbff;
+    padding: 160px 10%;
+    background: white;
 }
 
 .section.alt {
-    background: #e9f2f9;
+    background: #f3f7fb;
 }
 
-/* Dark luxury section */
 .section.dark {
-    background: #243746;
-    color: #f4f8fb;
+    background: #1f2a36;
+    color: white;
 }
 
-/* CONTENT */
-.content {
-    max-width: 900px;
-}
-
-.content.narrow {
-    max-width: 650px;
-}
-
-/* Heritage layout */
-@media (min-width: 900px) {
-    #heritage .content {
-        width: 48%;
-        max-width: none;
-        float: left;
-        margin-left: 8%;
-        margin-right: 4%;
-    }
-}
-
-@media (max-width: 899px) {
-    #heritage .content {
-        width: 100%;
-        float: none;
-        margin-left: 0;
-    }
-}
-
-/* HEADINGS */
+/* Headings */
 h2 {
-    font-size: 2.2rem;
-    margin-bottom: 35px;
-    color: #1e2f3f;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 40px;
     position: relative;
 }
 
-/* Subtle gold accent line under headings */
+/* Gold accent line */
 h2::after {
     content: "";
     display: block;
-    width: 60px;
+    width: 70px;
     height: 2px;
     background: #c6a75e;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
-.content p {
+p {
     font-size: 18px;
-    line-height: 1.9;
-    margin-bottom: 22px;
-    color: #5c6f82;
+    color: #5c6a79;
+    max-width: 750px;
 }
 
-/* ABOUT */
-.about {
-  padding: 120px 10%;
-  background-color: #f3f9fd;
-}
+/* ================= ABOUT ================= */
 
 .about-container {
-  display: flex;
-  align-items: center;
-  gap: 70px;
+    display: flex;
+    align-items: center;
+    gap: 80px;
 }
 
-.about-text h1 {
-  font-size: 48px;
-  margin-bottom: 25px;
-  color: #1e2f3f;
+.about-text {
+    flex: 1;
 }
 
-.about-text p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #5c6f82;
+.about-image {
+    flex: 1;
 }
 
 .about-image img {
-  width: 100%;
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(198, 167, 94, 0.15);
+    width: 100%;
+    border-radius: 12px;
 }
 
-/* FORMS */
+/* ================= FORM ================= */
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
+    max-width: 500px;
 }
 
 form input,
 form textarea {
-    padding: 14px;
-    border: 1px solid #e1e7ed;
-    background: #ffffff;
+    padding: 15px;
+    border: 1px solid #e5e8ec;
+    background: white;
     font-family: "Times New Roman", Times, serif;
-    font-size: 16px;
 }
 
 form input:focus,
@@ -250,27 +197,27 @@ form textarea:focus {
     border-color: #c6a75e;
 }
 
-/* GOLD BUTTON */
 form button {
     padding: 14px;
-    border: none;
+    border: 1px solid #c6a75e;
+    background: transparent;
+    color: #c6a75e;
     cursor: pointer;
-    background: #c6a75e;
-    color: #ffffff;
-    font-size: 16px;
     transition: 0.3s ease;
 }
 
 form button:hover {
-    background: #b8964e;
+    background: #c6a75e;
+    color: white;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
     text-align: center;
-    padding: 50px;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-    background: #243746;
-    color: #f4f8fb;
+    padding: 60px;
+    background: #1f2a36;
+    color: #d9dee4;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
